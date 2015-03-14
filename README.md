@@ -10,8 +10,6 @@ This repository contains supplementary material for *Gene network inference by f
 Citing
 ------
 
-::
-
     @article{Zitnik2015,
       title     = {Gene network inference by fusing data from diverse distributions},
       author    = {{\v{Z}}itnik, Marinka and Zupan, Bla{\v{z}}},
