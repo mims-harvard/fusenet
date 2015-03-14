@@ -6,7 +6,7 @@ import path
 
 
 class MultinomialFNet():
-    """Network inference via estimation of factorized multinomial graphical model.
+    """Network inference via estimation of a factorized multinomial graphical model.
 
     We minimize::
 

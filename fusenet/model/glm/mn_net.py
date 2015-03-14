@@ -6,7 +6,7 @@ import path
 
 
 class MultinomialNet():
-    """Network inference via estimation of nonfactorized multinomial graphical model.
+    """Network inference via estimation of a nonfactorized multinomial graphical model.
 
     We minimize::
 

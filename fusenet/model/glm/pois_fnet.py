@@ -6,7 +6,7 @@ import path
 
 
 class PoissonFNet():
-    """Network inference via estimation of factorized Poisson graphical model.
+    """Network inference via estimation of a factorized Poisson graphical model.
 
     We minimize::
 
