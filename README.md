@@ -13,10 +13,10 @@ Citing
     @article{Zitnik2015,
       title     = {Gene network inference by fusing data from diverse distributions},
       author    = {{\v{Z}}itnik, Marinka and Zupan, Bla{\v{z}}},
-      journal   = {},
-      volume    = {},
-      number    = {},
-      pages     = {},
+      journal   = {Bioinformatics},
+      volume    = {31},
+      number    = {12},
+      pages     = {230–239},
       year      = {2015},
-      publisher = {}
+      publisher = {Oxford Journals}
     }
