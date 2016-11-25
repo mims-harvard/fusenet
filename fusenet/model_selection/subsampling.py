@@ -41,7 +41,7 @@ class Subsampling():
         else:
             X = X if X is not None else self.X
         if m is None and self.m is None:
-            m = np.floor(10 * np.sqrt(X.shape[0]))
+            m = int(np.floor(10 * np.sqrt(X.shape[0])))
         else:
             m = m if m is not None else self.m
         Ss = []

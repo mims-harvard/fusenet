@@ -167,11 +167,12 @@ class MultinomialFNet():
         bias_theta = np.asarray(bias_theta)
 
         self.n_iter_ = n_iter
+        self.alpha_ = np.squeeze(alpha)
 
         # multiply appropriately to obtain feature dependency structure
-        D = np.zeros((n_features, n_features, len(alpha)))
+        D = np.zeros((n_features, n_features, len(self.alpha_)))
         xidx, yidx = np.triu_indices(n_features, 1)
-        for i_alpha, alpha in enumerate(alpha):
+        for i_alpha, alpha in enumerate(self.alpha_):
             for r, t in zip(xidx, yidx):
                 tmp1 = np.dot(W[..., i_alpha], U[:, t, i_alpha]).reshape(k, 1)
                 tmp2 = np.dot(U[:, r, i_alpha].T, np.dot(W[..., i_alpha].T, tmp1))
@@ -179,7 +180,6 @@ class MultinomialFNet():
                 val = np.linalg.norm(vec, 2)
                 D[r, t, i_alpha] = D[t, r, i_alpha] = val
 
-        self.alpha_ = np.squeeze(alpha)
         self.bias_theta_ = np.squeeze(bias_theta)
         self.U_ = np.squeeze(U)
         self.V_ = np.squeeze(V)

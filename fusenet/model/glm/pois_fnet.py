@@ -152,6 +152,7 @@ class PoissonFNet():
                       selection=self.selection)
 
         self.n_iter_ = n_iter
+        self.alpha_ = alpha
 
         # multiply appropriately to obtain feature dependency structure
         D = np.zeros((n_features, n_features, len(self.alpha_)))
@@ -163,7 +164,6 @@ class PoissonFNet():
                 theta = np.dot(U[:, ii, i_alpha].T, np.dot(W[..., i_alpha].T, tmp))
                 D[ii, idxs, i_alpha] = theta
 
-        self.alpha_ = alpha
         self.U_ = np.squeeze(U)
         self.W_ = np.squeeze(W)
         self.D_ = np.squeeze(D)
